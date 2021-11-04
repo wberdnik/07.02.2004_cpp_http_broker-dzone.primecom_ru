@@ -1,0 +1,23 @@
+HKCR
+{
+	AddIn.AddInObject.1 = s 'AddInObject Class'
+	{
+		CLSID = s '{04024C31-0E7B-11d1-A486-004095E1DAEA}'
+	}
+	AddIn.AddInObject = s 'AddInObject Class'
+	{
+		CLSID = s '{04024C31-0E7B-11d1-A486-004095E1DAEA}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {04024C31-0E7B-11d1-A486-004095E1DAEA} = s 'AddInObject Class'
+		{
+			ProgID = s 'AddIn.AddInObject.1'
+			VersionIndependentProgID = s 'AddIn.AddInObject'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
